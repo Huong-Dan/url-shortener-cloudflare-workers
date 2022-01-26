@@ -1,7 +1,6 @@
-# url-shortener-cloudflare-workers
-URL Rút Gọn Miễn Phí Với Cloudflare Workers
+# URL Rút Gọn Miễn Phí Với Cloudflare Workers
 
-# Hướng dẫn
+## Các Bước Thực Hiện
 - Sau khi đã tạo tài khoản Cloudflare, vào mục [Workers](https://dash.cloudflare.com/sign-up/workers).
 - Bạn chọn cho mình một subdomain, chọn gói miễn phí.
 - Sau đó, chọn Create a Service. <br />
@@ -32,4 +31,5 @@ async function handleRedirect(request) {
 ```
 - Sau đó, nhấn **Save and Deploy** và thưởng thức thành quả:)
 
+## Credits
 Nguồn tham khảo: [Lucjan Suski](https://lucjan.medium.com/free-url-shortener-with-cloudflare-workers-125eaf87b1ec)

@@ -30,6 +30,6 @@ async function handleRedirect(request) {
   }
 }
 ```
-- Sau đó, nhấn Save and Deploy và thưởng thức thành quả:)
+- Sau đó, nhấn **Save and Deploy** và thưởng thức thành quả:)
 
 Nguồn tham khảo: [Lucjan Suski](https://lucjan.medium.com/free-url-shortener-with-cloudflare-workers-125eaf87b1ec)

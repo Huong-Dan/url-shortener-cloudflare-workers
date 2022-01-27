@@ -21,12 +21,11 @@ addEventListener('fetch', event => {
 })
 
 async function handleRedirect(request) {
-  let pathname = new URL(request.url).pathname.replace("/", "");
-  let location = redirects.get(pathname);
-  return location 
-    ? Response.redirect(location, 301) 
-    : new Response("Not Found", {status: 404})
-  }
+let pathname = new URL(request.url).pathname.replace("/", "");
+let location = redirects.get(pathname);
+return location 
+  ? Response.redirect(location, 301) 
+  : new Response("Not Found", {status: 404})
 }
 ```
 - Sau đó, nhấn **Save and Deploy** và thưởng thức thành quả:)

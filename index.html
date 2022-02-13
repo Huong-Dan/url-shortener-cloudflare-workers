@@ -10,14 +10,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
-                
+                :root{--text-color: white}
             * {font-family: 'Roboto', sans-serif; border-radius: 5px;}
 
             .content {
                 margin: 30px;
                 padding: 50px;
                 background-color: #121212;
-                color:white;
+                color:var(--text-color);
+            }
+
+            a {
+              color: var(--text-color);
+              text-decoration: underline;
             }
           body {
                 background-color: #222222;

@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
+
+  
     <title>URL Rút Gọn Miễn Phí Với Cloudflare Workers</title>
     <link rel="canonical" href="https://huong-dan.github.io/url-shortener-cloudflare-workers/">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -28,6 +31,7 @@
 <li>Sau khi đã hoàn tất việc tạo một Worker (Service), bạn nhấn Quick edit ở trang quản lý Worker.
 <img src="https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img3.png" alt="" />
 <li>Rồi dán vào đoạn mã dưới đây như <a href="https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img4.png?raw=true">hình</a>.</li>
+<amp-script src="https://gist.github.com/chupper100/401fef99f2e8200d021b2518c1e49b44.js" width="300" height="100"></amp-script>
 <pre><code>
 const redirects = new Map([
   ["url-rutgon", "https://google.com/url-chua-rut-gon"],

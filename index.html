@@ -1,0 +1,54 @@
+<!doctype html>
+<html amp>
+<head>
+  <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Hello, AMPs</title>
+    <link rel="canonical" href="https://huong-dan.github.io/url-shortener-cloudflare-workers/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <h1 id="hello">Hello AMPHTML World!</h1>
+  </body>
+</html>
+</head>
+<body>
+<h1 id="url-r-t-g-n-mi-n-ph-v-i-cloudflare-workers">URL Rút Gọn Miễn Phí Với Cloudflare Workers</h1>
+<h2 id="c-c-b-c-th-c-hi-n">Các Bước Thực Hiện</h2>
+<ul>
+<li>Sau khi đã tạo tài khoản Cloudflare, vào mục <a href="https://dash.cloudflare.com/sign-up/workers">Workers</a>.</li>
+<li>Bạn chọn cho mình một subdomain, chọn gói miễn phí.</li>
+<li>Sau đó, chọn Create a Service.
+<img src="https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img1.png" alt="" /> </li>
+<li>Đặt tên theo ý thích.
+<img src="https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img2.png" alt="" /> </li>
+<li>Sau khi đã hoàn tất việc tạo một Worker (Service), bạn nhấn Quick edit ở trang quản lý Worker.
+<img src="https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img3.png" alt="" /> </li>
+<li>Rồi dán vào đoạn mã dưới đây như <a href="https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img4.png">hình</a>.
+<pre><code>
+const redirects = new Map([
+[&quot;url-rutgon&quot;, &quot;<a href="https://google.com/url-chua-rut-gon">https://google.com/url-chua-rut-gon</a>&quot;],
+[&quot;url-rutgon2&quot;, &quot;<a href="https://google.com/url-chua-rut-gon2">https://google.com/url-chua-rut-gon2</a>&quot;],
+])</li>
+</ul>
+<p>addEventListener(&#39;fetch&#39;, event =&gt; {
+  event.respondWith(handleRedirect(event.request));
+})</p>
+<p>async function handleRedirect(request) {
+let pathname = new URL(request.url).pathname.replace(&quot;/&quot;, &quot;&quot;);
+let location = redirects.get(pathname);
+return location 
+  ? Response.redirect(location, 301) 
+  : new Response(&quot;Not Found&quot;, {status: 404})
+}
+</code></pre></p>
+<ul>
+<li>Sau đó, nhấn <strong>Save and Deploy</strong> và thưởng thức thành quả:)</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<p><a href="https://gist.github.com/chupper100/401fef99f2e8200d021b2518c1e49b44">Source Code</a> <br/>
+Nguồn tham khảo: <a href="https://lucjan.medium.com/free-url-shortener-with-cloudflare-workers-125eaf87b1ec">Lucjan Suski</a></p>
+  
+</body>
+</html>

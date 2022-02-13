@@ -3,7 +3,7 @@
 ## Các Bước Thực Hiện
 - Sau khi đã tạo tài khoản Cloudflare, vào mục [Workers](https://dash.cloudflare.com/sign-up/workers).
 - Bạn chọn cho mình một subdomain, chọn gói miễn phí.
-- Sau đó, chọn Create a Service. <br />
+- Sau đó, chọn Create a Service.
 [![](https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img1.png)](#)
 - Đặt tên theo ý thích.
 [![](https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img2.png)](#)

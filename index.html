@@ -28,24 +28,6 @@
 <img src="./img3.png" alt=""   />
 <li>Rồi dán vào đoạn mã dưới đây như <a href="https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img4.png?raw=true">hình</a>.</li>
 <script src="https://gist.github.com/chupper100/401fef99f2e8200d021b2518c1e49b44.js" width="300" height="100"></script>
-<pre><code>
-const redirects = new Map([
-  ["url-rutgon", "https://google.com/url-chua-rut-gon"],
-  ["url-rutgon2", "https://google.com/url-chua-rut-gon2"],
-])
-
-addEventListener('fetch', event => {
-  event.respondWith(handleRedirect(event.request));
-})
-
-async function handleRedirect(request) {
-let pathname = new URL(request.url).pathname.replace("/", "");
-let location = redirects.get(pathname);
-return location 
-  ? Response.redirect(location, 301) 
-  : new Response("Not Found", {status: 404})
-}
-</code></pre>
 <ul>
 <li>Sau đó, nhấn <strong>Save and Deploy</strong> và thưởng thức thành quả:)</li>
 </ul>

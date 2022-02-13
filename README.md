@@ -4,11 +4,11 @@
 - Sau khi đã tạo tài khoản Cloudflare, vào mục [Workers](https://dash.cloudflare.com/sign-up/workers).
 - Bạn chọn cho mình một subdomain, chọn gói miễn phí.
 - Sau đó, chọn Create a Service.
-[![](https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img1.png)](#)
+<img src="https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img1.png" alt="" /> 
 - Đặt tên theo ý thích.
-[![](https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img2.png)](#)
+<img src="https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img2.png" alt="" /> 
 - Sau khi đã hoàn tất việc tạo một Worker (Service), bạn nhấn Quick edit ở trang quản lý Worker.
-[![](https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img3.png)](#)
+<img src="https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img3.png" alt="" /> 
 - Rồi dán vào đoạn mã dưới đây như [hình](https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img4.png).
 ```javascript
 const redirects = new Map([

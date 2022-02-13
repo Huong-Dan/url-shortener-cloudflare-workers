@@ -58,5 +58,12 @@
 <h2 id="resources">Resources</h2>
 <p>Nguồn tham khảo: <a href="https://lucjan.medium.com/free-url-shortener-with-cloudflare-workers-125eaf87b1ec">Lucjan Suski</a></p>
 </div> 
+<script>
+  document.querySelectorAll('img').forEach(e => {
+    e.addEventListener("click", function(){
+      window.location.href = e.src; 
+    })
+  })
+</script>
 </body>
 </html>

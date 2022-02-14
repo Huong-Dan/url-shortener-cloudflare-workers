@@ -10,7 +10,7 @@
 - Sau khi đã hoàn tất việc tạo một Worker (Service), bạn nhấn Quick edit ở trang quản lý Worker.
 <img src="https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img3.png" alt="" /> 
 - Rồi dán vào đoạn mã dưới đây như [hình](https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img4.png).
-<pre><code>
+```
 const redirects = new Map([
   ["url-rutgon", "https://google.com/url-chua-rut-gon"],
   ["url-rutgon2", "https://google.com/url-chua-rut-gon2"],
@@ -27,7 +27,8 @@ return location
   ? Response.redirect(location, 301) 
   : new Response("Not Found", {status: 404})
 }
-</code></pre>
+```
+
 - Sau đó, nhấn **Save and Deploy** và thưởng thức thành quả:)
 
 ## Resources

@@ -9,16 +9,23 @@
 
     <link ef="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
-                :root{--text-color: white}
+            :root{--text-color: white}
             @font-face {font-family: system;font-style: normal;src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");}
-            * {font-family: 'system'; border-radius: 5px;transition: all .15s ease;}
+            * {font-family: 'system', sans-serif; border-radius: 5px;transition: all .15s ease;}
             .content {
                 margin: 30px;
                 padding: 50px;
                 background-color: #121212;
                 color:var(--text-color);
             }
-            img{width: auto; height: auto;max-width: -webkit-fill-available;}
+            .card {
+              margin: 30px;
+                padding: 50px;
+                background-color: #121212;
+                color:var(--text-color);
+            }
+      .gist{margin: 15px 0;}
+            img{width: auto; height: auto;max-width: -webkit-fill-available;margin: 15px 0;}
             a {
               color: var(--text-color);
               text-decoration: underline;
@@ -26,8 +33,9 @@
           body {
                 background-color: #222222;
             }
+      h1{text-align: center;}
 @media screen and (max-width:720px) {
-  .content {
+  .card {
                 margin: 0px;
                 padding: 15px;
                 border-radius: 0;

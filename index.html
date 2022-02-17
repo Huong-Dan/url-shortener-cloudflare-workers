@@ -7,34 +7,18 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <meta name='description' content='Hướng dẫn sử dụng Cloudflare Workers chi tiết để rút gọn url tùy chỉnh miễn phí 100%.'>
 
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "amc2apgl8x");
-  </script>
-  
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link ef="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
                 :root{--text-color: white}
-            * {font-family: 'Roboto', sans-serif; border-radius: 5px;transition: all .15s ease;}
+            @font-face {font-family: system;font-style: normal;src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");}
+            * {font-family: 'system'; border-radius: 5px;transition: all .15s ease;}
             .content {
                 margin: 30px;
                 padding: 50px;
                 background-color: #121212;
                 color:var(--text-color);
             }
-            .card {
-              margin: 30px;
-                padding: 50px;
-                background-color: #121212;
-                color:var(--text-color);
-            }
-      .gist{margin: 15px 0;}
-            img{width: auto; height: auto;max-width: -webkit-fill-available;margin: 15px 0;}
+            img{width: auto; height: auto;max-width: -webkit-fill-available;}
             a {
               color: var(--text-color);
               text-decoration: underline;
@@ -42,9 +26,8 @@
           body {
                 background-color: #222222;
             }
-      h1{text-align: center;}
 @media screen and (max-width:720px) {
-  .card {
+  .content {
                 margin: 0px;
                 padding: 15px;
                 border-radius: 0;
@@ -57,7 +40,7 @@
     </style>
   </head>
 <body>
-<div class="content card">
+<div class="content">
 <h1 id="">URL Rút Gọn Miễn Phí Với Cloudflare Workers</h1>
 <h2 id="steps">Các Bước Thực Hiện</h2>
 <li>Sau khi đã tạo tài khoản Cloudflare, vào mục <a href="https://dash.cloudflare.com/sign-up/workers">Workers</a>.</li>
@@ -68,28 +51,12 @@
 <img src="./img2.png" alt="Service name"  /> </li>
 <li>Sau khi đã hoàn tất việc tạo một Worker (Service), bạn nhấn Quick edit ở trang quản lý Worker.
 <img src="./img3.png" alt="Quick edit button"   />
-<li>Rồi dán vào đoạn mã dưới đây.</li>
+<li>Rồi dán vào đoạn mã dưới đây như <a href="https://github.com/Huong-Dan/url-shortener-cloudflare-workers/blob/main/img4.png?raw=true">hình</a>.</li>
 <script src="https://gist.github.com/chupper100/401fef99f2e8200d021b2518c1e49b44.js" width="300" height="100"></script>
 <li>Sau đó, nhấn <strong>Save and Deploy</strong> và thưởng thức thành quả:)</li>
 <h2 id="resources">Resources</h2>
-<li>Nguồn tham khảo: <a href="https://lucjan.medium.com/free-url-shortener-with-cloudflare-workers-125eaf87b1ec">Lucjan Suski</a></p></li>
-<li><a href="https://developers.cloudflare.com/workers/examples/bulk-redirects">Docs/Bulk redirects </a></li>
+<p>Nguồn tham khảo: <a href="https://lucjan.medium.com/free-url-shortener-with-cloudflare-workers-125eaf87b1ec">Lucjan Suski</a></p>
 </div> 
-<div class="card discussion">
-    <script src="https://giscus.app/client.js"
-    data-repo="Huong-Dan/huong-dan.github.io"
-    data-repo-id="R_kgDOG1g2lQ"
-    data-mapping="number"
-    data-term="11"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="dark"
-    data-lang="en"
-    crossorigin="anonymous"
-    async>
-</script>
-</div>
 <script>
   document.querySelectorAll('img').forEach(e => {
     e.addEventListener("click", function(){
